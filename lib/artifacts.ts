@@ -6,6 +6,7 @@ export interface Artifact {
   section: "build" | "create";
   detail: string;
   links?: { label: string; url: string }[];
+  deepDivePath?: string;
 }
 
 export const artifacts: Artifact[] = [
@@ -80,6 +81,7 @@ export const artifacts: Artifact[] = [
       "Context Architecture",
     ],
     section: "create",
+    deepDivePath: "/portfolio/agentic-novel",
     detail:
       "Agentic is a novel-drafting system built as a Claude Code skill. The system treats chapter drafting as a repeatable, auditable process — not a conversation with a blank page. Before writing any chapter, the system loads context in three mandatory layers. Layer 1 loads the prose style analysis, a banned-words list, and 12 craft rules that apply every time. Layer 2 loads character voice guides only for characters physically present in the chapter — not the full cast. Layer 3 loads the chapter outline plus the last 2–3 drafted chapters from the same plotline.\n\nThat last rule is the critical one. The novel runs two independent tracks — Sloane's story and Graham's — that converge at chapter 17. Loading Graham chapters while drafting Sloane causes what the system calls plot bleed: characters reference information they don't have, tone bleeds across narrative lines, and the two stories start to collapse into each other. The siloing rule is absolute. Each plotline loads only its own history.\n\nThe craft constraints are equally specific: show interior through exterior (never name emotions directly), use \"said\" or nothing for dialogue tags, build similes from the extraordinary down to the mundane, make objects carry meaning, withhold the important thing. Every chapter ends on an unresolved question. Every beat in the outline must appear — no additions, no skips. After each draft, the system reports word count, beats hit, and flags continuity issues. 35 chapters, two plotlines, one consistent voice. The specification runs the machine. The author runs the voice.",
   },

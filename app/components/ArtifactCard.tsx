@@ -6,9 +6,11 @@ interface ArtifactCardProps {
 }
 
 export default function ArtifactCard({ artifact }: ArtifactCardProps) {
+  const href = artifact.deepDivePath || `/portfolio#${artifact.id}`;
+
   return (
     <Link
-      href={`/portfolio#${artifact.id}`}
+      href={href}
       className="group block rounded-lg border border-zinc-200 p-6 hover:border-zinc-400 hover:shadow-sm transition-all"
     >
       <h3 className="text-lg font-semibold text-zinc-900 group-hover:text-zinc-700">
