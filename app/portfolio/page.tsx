@@ -21,29 +21,29 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <div className="py-16 px-6 md:px-0">
-      <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
+    <div className="py-16">
+      <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-serif)] font-normal text-[#111] leading-tight">
         Portfolio
       </h1>
-      <p className="mt-3 text-base text-zinc-500 max-w-2xl">
+      <p className="mt-3 text-base text-[#777] max-w-2xl">
         A closer look at how I build and create with AI.
       </p>
 
-      <div className="mt-16">
+      <div>
         <SectionHeader title="How I Build with AI" />
         {buildArtifacts.map((artifact) => (
           <ArtifactDetail key={artifact.id} artifact={artifact} />
         ))}
       </div>
 
-      <div className="mt-16">
+      <div>
         <SectionHeader title="How I Create with AI" />
         {createArtifacts.map((artifact) => (
           <ArtifactDetail key={artifact.id} artifact={artifact} />
         ))}
       </div>
 
-      <div className="mt-16">
+      <div>
         <SectionHeader title="Links" />
         <div className="flex flex-wrap gap-4">
           {externalLinks.map((link) => (
@@ -52,7 +52,7 @@ export default function PortfolioPage() {
               href={link.href}
               target={link.href.startsWith("mailto:") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-              className="inline-block rounded-md border border-zinc-200 px-5 py-3 text-sm font-medium text-zinc-700 hover:border-zinc-400 hover:text-zinc-900 transition-colors"
+              className="inline-block border-2 border-[#111] px-5 py-3 text-sm font-medium text-[#111] hover:bg-[#111] hover:text-white transition-colors"
             >
               {link.label}
             </a>

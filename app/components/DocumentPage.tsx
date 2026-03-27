@@ -14,20 +14,20 @@ export default function DocumentPage({
   children,
 }: DocumentPageProps) {
   return (
-    <div className="py-16 px-6 md:px-0">
+    <div className="py-16">
       <Link
         href={backLink.href}
-        className="text-sm font-medium text-zinc-500 hover:text-zinc-700 transition-colors"
+        className="text-xs uppercase tracking-[0.12em] text-[#999] hover:text-[#111] transition-colors"
       >
         &larr; {backLink.label}
       </Link>
 
-      <h1 className="mt-6 text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
+      <h1 className="mt-8 text-3xl md:text-4xl font-[family-name:var(--font-serif)] font-normal text-[#111] leading-tight">
         {title}
       </h1>
-      <p className="mt-3 text-base text-zinc-500 max-w-2xl">{description}</p>
+      <p className="mt-3 text-base text-[#777] max-w-2xl">{description}</p>
 
-      <div className="mt-10 max-w-3xl">{children}</div>
+      <div className="mt-12 prose">{children}</div>
     </div>
   );
 }

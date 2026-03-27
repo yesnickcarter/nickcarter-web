@@ -8,24 +8,22 @@ export default function ArtifactDetail({ artifact }: ArtifactDetailProps) {
   const paragraphs = artifact.detail.split("\n\n");
 
   return (
-    <article id={artifact.id} className="py-10 border-b border-zinc-100 last:border-b-0">
-      <h3 className="text-xl font-semibold text-zinc-900">{artifact.title}</h3>
-      <p className="mt-2 text-base text-zinc-600 italic">{artifact.oneLiner}</p>
+    <article
+      id={artifact.id}
+      className="py-10 border-l-[3px] border-[#111] pl-6 mb-10"
+    >
+      <h3 className="text-xl font-[family-name:var(--font-serif)] font-normal text-[#111]">
+        {artifact.title}
+      </h3>
+      <p className="mt-2 text-base text-[#777] italic">{artifact.oneLiner}</p>
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {artifact.skills.map((skill) => (
-          <span
-            key={skill}
-            className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
+      <p className="mt-4 text-[11px] uppercase tracking-[0.12em] text-[#999]">
+        {artifact.skills.join(" \u00B7 ")}
+      </p>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-6 space-y-4 max-w-[65ch]">
         {paragraphs.map((paragraph, i) => (
-          <p key={i} className="text-base leading-relaxed text-zinc-700">
+          <p key={i} className="text-base leading-[1.7] text-[#555]">
             {paragraph}
           </p>
         ))}
@@ -39,7 +37,7 @@ export default function ArtifactDetail({ artifact }: ArtifactDetailProps) {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-md border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-700 hover:border-zinc-400 hover:text-zinc-900 transition-colors"
+              className="inline-block border-2 border-[#111] px-5 py-2 text-sm font-medium text-[#111] hover:bg-[#111] hover:text-white transition-colors"
             >
               {link.label} &rarr;
             </a>

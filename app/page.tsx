@@ -13,17 +13,17 @@ export default function Home() {
       <Hero />
       <Summary />
 
-      <div id="artifacts" className="py-16 px-6 md:px-0">
+      <div id="artifacts" className="py-16">
         <SectionHeader title="How I Build with AI" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {buildArtifacts.map((artifact) => (
             <ArtifactCard key={artifact.id} artifact={artifact} />
           ))}
         </div>
 
-        <div className="mt-16">
+        <div>
           <SectionHeader title="How I Create with AI" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {createArtifacts.map((artifact) => (
               <ArtifactCard key={artifact.id} artifact={artifact} />
             ))}

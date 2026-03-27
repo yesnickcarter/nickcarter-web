@@ -56,53 +56,48 @@ export default function AgenticNovelPage() {
   const paragraphs = artifact.detail.split("\n\n");
 
   return (
-    <div className="py-16 px-6 md:px-0">
+    <div className="py-16">
       <Link
         href="/portfolio"
-        className="text-sm font-medium text-zinc-500 hover:text-zinc-700 transition-colors"
+        className="text-xs uppercase tracking-[0.12em] text-[#999] hover:text-[#111] transition-colors"
       >
         &larr; Back to Portfolio
       </Link>
 
-      <h1 className="mt-6 text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
+      <h1 className="mt-8 text-3xl md:text-4xl font-[family-name:var(--font-serif)] font-normal text-[#111] leading-tight">
         Agentic — AI-Assisted Novel Drafting System
       </h1>
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {artifact.skills.map((skill) => (
-          <span
-            key={skill}
-            className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
+      <p className="mt-4 text-[11px] uppercase tracking-[0.12em] text-[#999]">
+        {artifact.skills.join(" \u00B7 ")}
+      </p>
 
-      <div className="mt-8 max-w-3xl space-y-4">
+      <div className="mt-8 max-w-[65ch] space-y-4">
         {paragraphs.map((paragraph, i) => (
-          <p key={i} className="text-base leading-relaxed text-zinc-700">
+          <p key={i} className="text-base leading-[1.7] text-[#555]">
             {paragraph}
           </p>
         ))}
       </div>
 
-      <div className="mt-16">
-        <h2 className="text-xl font-semibold text-zinc-900 mb-6">Documents</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+      <div className="mt-20 border-t-2 border-[#111] pt-6">
+        <h2 className="text-2xl font-[family-name:var(--font-serif)] font-normal text-[#111] mb-8">
+          Documents
+        </h2>
+        <div className="grid gap-6 sm:grid-cols-2">
           {documents.map((doc) => (
             <Link
               key={doc.href}
               href={doc.href}
-              className="group block rounded-lg border border-zinc-200 p-6 hover:border-zinc-400 hover:shadow-sm transition-all"
+              className="group block border-t border-[#ddd] pt-5 hover:border-[#111] transition-colors"
             >
-              <h3 className="text-lg font-semibold text-zinc-900 group-hover:text-zinc-700">
+              <h3 className="text-base font-[family-name:var(--font-serif)] font-normal text-[#111] group-hover:text-[#555]">
                 {doc.title}
               </h3>
-              <p className="mt-2 text-sm text-zinc-600 leading-relaxed">
+              <p className="mt-2 text-sm text-[#777] leading-relaxed">
                 {doc.description}
               </p>
-              <p className="mt-4 text-sm font-medium text-zinc-500 group-hover:text-zinc-700 transition-colors">
+              <p className="mt-3 text-sm font-medium text-[#111] group-hover:text-[#555] transition-colors">
                 Read &rarr;
               </p>
             </Link>

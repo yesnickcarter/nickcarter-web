@@ -11,25 +11,18 @@ export default function ArtifactCard({ artifact }: ArtifactCardProps) {
   return (
     <Link
       href={href}
-      className="group block rounded-lg border border-zinc-200 p-6 hover:border-zinc-400 hover:shadow-sm transition-all"
+      className="group block border-l-[3px] border-[#111] pl-6 py-4 hover:pl-7 transition-all"
     >
-      <h3 className="text-lg font-semibold text-zinc-900 group-hover:text-zinc-700">
+      <h3 className="text-lg font-[family-name:var(--font-serif)] font-normal text-[#111] group-hover:text-[#555]">
         {artifact.title}
       </h3>
-      <p className="mt-2 text-sm text-zinc-600 leading-relaxed">
+      <p className="mt-2 text-sm text-[#777] leading-relaxed">
         {artifact.oneLiner}
       </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {artifact.skills.map((skill) => (
-          <span
-            key={skill}
-            className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-      <p className="mt-4 text-sm font-medium text-zinc-500 group-hover:text-zinc-700 transition-colors">
+      <p className="mt-3 text-[11px] uppercase tracking-[0.12em] text-[#999]">
+        {artifact.skills.join(" \u00B7 ")}
+      </p>
+      <p className="mt-3 text-sm font-medium text-[#111] group-hover:text-[#555] transition-colors">
         View Details &rarr;
       </p>
     </Link>

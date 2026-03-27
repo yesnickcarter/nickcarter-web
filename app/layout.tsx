@@ -22,8 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col bg-white text-zinc-900 font-[family-name:var(--font-inter)]">
-        <div className="max-w-5xl mx-auto w-full flex flex-col flex-1">
+      <body className="min-h-screen flex flex-col bg-white text-[#111] font-[family-name:var(--font-inter)]">
+        <div className="max-w-4xl mx-auto w-full flex flex-col flex-1 px-6">
           <Nav />
           <main className="flex-1">{children}</main>
           <Footer />
