@@ -16,6 +16,12 @@ const patterns = [
       "Real-time browser mockups for design decisions. See it, click it, decide in seconds instead of paragraphs.",
     href: "/patterns/visual-design-review",
   },
+  {
+    title: "Whiteboard Verification",
+    description:
+      "The AI draws what it understands before building. You verify the diagram, catch misunderstandings, and approve before a line of code is written.",
+    href: "/patterns/whiteboard-verification",
+  },
 ];
 
 export default function PatternsPage() {
