@@ -115,7 +115,7 @@ export function parseMarkdown(raw: string): MarkdownToken[] {
 export function formatInline(text: string): string {
   return text
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/`(.+?)`/g, '<code class="bg-zinc-100 px-1.5 py-0.5 rounded text-sm font-mono">$1</code>')
+    .replace(/`(.+?)`/g, "<code>$1</code>")
     .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
 }
 
@@ -126,27 +126,30 @@ function escapeHtml(text: string): string {
     .replace(/>/g, "&gt;");
 }
 
-/** Convert parsed tokens to an HTML string */
+/** Convert parsed tokens to an HTML string.
+ *  These elements render inside a .prose container whose CSS handles
+ *  all typography, colors, and spacing. Only add classes here for
+ *  structure (list-style, overflow) — never colors or font sizes. */
 export function tokensToHtml(tokens: MarkdownToken[]): string {
   return tokens
     .map((t) => {
       switch (t.type) {
         case "h1":
-          return `<h1 class="text-2xl font-bold text-zinc-900 mt-10 mb-4">${formatInline(t.content)}</h1>`;
+          return `<h1>${formatInline(t.content)}</h1>`;
         case "h2":
-          return `<h2 class="text-xl font-semibold text-zinc-900 mt-8 mb-3">${formatInline(t.content)}</h2>`;
+          return `<h2>${formatInline(t.content)}</h2>`;
         case "h3":
-          return `<h3 class="text-lg font-semibold text-zinc-800 mt-6 mb-2">${formatInline(t.content)}</h3>`;
+          return `<h3>${formatInline(t.content)}</h3>`;
         case "h4":
-          return `<h4 class="text-base font-semibold text-zinc-800 mt-4 mb-2">${formatInline(t.content)}</h4>`;
+          return `<h4>${formatInline(t.content)}</h4>`;
         case "p":
-          return `<p class="text-base leading-relaxed text-zinc-700 mb-4">${formatInline(t.content)}</p>`;
+          return `<p>${formatInline(t.content)}</p>`;
         case "ul":
-          return `<ul class="list-disc list-inside space-y-1 mb-4 text-base leading-relaxed text-zinc-700">${(t.items || []).map((item) => `<li>${formatInline(item)}</li>`).join("")}</ul>`;
+          return `<ul>${(t.items || []).map((item) => `<li>${formatInline(item)}</li>`).join("")}</ul>`;
         case "hr":
-          return `<hr class="my-8 border-zinc-200" />`;
+          return `<hr />`;
         case "codeblock":
-          return `<pre class="bg-zinc-50 border border-zinc-200 rounded-lg p-4 overflow-x-auto mb-4 text-sm font-mono text-zinc-800"><code>${escapeHtml(t.content)}</code></pre>`;
+          return `<pre><code>${escapeHtml(t.content)}</code></pre>`;
         case "blank":
           return "";
         default:
