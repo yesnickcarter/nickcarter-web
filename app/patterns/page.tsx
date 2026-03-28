@@ -22,6 +22,12 @@ const patterns = [
       "The AI draws what it understands before building. You verify the diagram, catch misunderstandings, and approve before a line of code is written.",
     href: "/patterns/whiteboard-verification",
   },
+  {
+    title: "Intentional Obsolescence",
+    description:
+      "Every spec, skill, and workflow is built to be replaced in 90 days. The artifacts are snapshots. The process that produces them is the skill.",
+    href: "/patterns/intentional-obsolescence",
+  },
 ];
 
 export default function PatternsPage() {
