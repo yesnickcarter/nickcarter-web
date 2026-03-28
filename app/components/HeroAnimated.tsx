@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HeroAnimated() {
@@ -41,10 +42,22 @@ export default function HeroAnimated() {
           See the work
         </motion.a>
         <motion.div
-          className="hero-btn inline-block border border-[#e8e4df] px-7 py-3 text-sm text-[#a69e95] tracking-wide text-center"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.75, ease: "easeOut" }}
+        >
+          <Link
+            href="/patterns"
+            className="hero-btn inline-block border-2 border-[#b45309] px-7 py-3 text-sm font-medium text-[#1a1a1a] tracking-wide hover:bg-[#b45309] hover:text-white transition-colors text-center"
+          >
+            AI Patterns
+          </Link>
+        </motion.div>
+        <motion.div
+          className="hero-btn inline-block border border-[#e8e4df] px-7 py-3 text-sm text-[#a69e95] tracking-wide text-center"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
         >
           Ask AI &middot; soon
         </motion.div>
@@ -52,7 +65,7 @@ export default function HeroAnimated() {
           className="hero-btn inline-block border border-[#e8e4df] px-7 py-3 text-sm text-[#a69e95] tracking-wide text-center"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
+          transition={{ duration: 0.4, delay: 1.05, ease: "easeOut" }}
         >
           Check Fit &middot; soon
         </motion.div>

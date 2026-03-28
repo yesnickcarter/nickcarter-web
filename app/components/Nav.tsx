@@ -9,12 +9,20 @@ export default function Nav() {
       >
         Nick Carter
       </Link>
-      <Link
-        href="/portfolio"
-        className="nav-link text-sm tracking-wide uppercase text-[#6b6560] hover:text-[#1a1a1a] transition-colors"
-      >
-        Portfolio
-      </Link>
+      <div className="flex items-center gap-6">
+        <Link
+          href="/patterns"
+          className="nav-link text-sm tracking-wide uppercase text-[#6b6560] hover:text-[#1a1a1a] transition-colors"
+        >
+          AI Patterns
+        </Link>
+        <Link
+          href="/portfolio"
+          className="nav-link text-sm tracking-wide uppercase text-[#6b6560] hover:text-[#1a1a1a] transition-colors"
+        >
+          Portfolio
+        </Link>
+      </div>
     </nav>
   );
 }
