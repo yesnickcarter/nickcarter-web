@@ -26,6 +26,8 @@ export default function Home() {
 
         <div id="artifacts" className="py-16">
 
+          <hr className="border-t-2 border-[#e8e4df] my-12" />
+
           <WorkflowDiagram />
 
           <ScrollReveal>
@@ -52,6 +54,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <hr className="border-t-2 border-[#e8e4df] my-12" />
 
         <SkillsMapDiagram />
       </div>
