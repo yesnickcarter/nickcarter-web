@@ -3,6 +3,7 @@ import Link from "next/link";
 import { artifacts } from "@/lib/artifacts";
 import ScrollReveal from "@/app/components/ScrollReveal";
 import PageTransition from "@/app/components/PageTransition";
+import ArchitectureDiagram from "./architecture-diagram";
 
 export const metadata: Metadata = {
   title: "LoreHaven — Context Architecture for AI Memory — Nick Carter",
@@ -72,6 +73,8 @@ export default function LoreHavenPage() {
             ))}
           </div>
         </ScrollReveal>
+
+        <ArchitectureDiagram />
 
         <ScrollReveal delay={0.2}>
           <div className="mt-20 border-t-2 border-[#1a1a1a] pt-6">
