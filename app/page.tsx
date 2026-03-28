@@ -6,6 +6,7 @@ import ScrollReveal from "./components/ScrollReveal";
 import PageTransition from "./components/PageTransition";
 import SiteMapDiagram from "./components/SiteMapDiagram";
 import WorkflowDiagram from "./components/WorkflowDiagram";
+import SkillsMapDiagram from "./components/SkillsMapDiagram";
 import { artifacts } from "@/lib/artifacts";
 
 export default function Home() {
@@ -51,6 +52,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <SkillsMapDiagram />
       </div>
     </PageTransition>
   );
