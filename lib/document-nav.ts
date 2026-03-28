@@ -23,6 +23,17 @@ export const agenticNovelNav: ArtifactNav = {
   ],
 };
 
+export const lorehavenNav: ArtifactNav = {
+  artifactTitle: "LoreHaven",
+  overviewHref: "/portfolio/lorehaven",
+  documents: [
+    { title: "Context Architecture", href: "/portfolio/lorehaven/context-architecture" },
+    { title: "MCP Server", href: "/portfolio/lorehaven/mcp-server" },
+    { title: "Client Architecture", href: "/portfolio/lorehaven/client-architecture" },
+    { title: "Lessons Learned", href: "/portfolio/lorehaven/lessons-learned" },
+  ],
+};
+
 export const thisSiteNav: ArtifactNav = {
   artifactTitle: "nickcarter.ai",
   overviewHref: "/portfolio/this-site",
