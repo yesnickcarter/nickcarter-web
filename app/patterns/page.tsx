@@ -28,6 +28,12 @@ const patterns = [
       "Every spec, skill, and workflow is built to be replaced in 90 days. The artifacts are snapshots. The process that produces them is the skill.",
     href: "/patterns/intentional-obsolescence",
   },
+  {
+    title: "Just Use AI",
+    description:
+      "Sign up. Open it. Use it on something real. The adoption curve isn't a learning curve — it's a habit curve.",
+    href: "/patterns/just-use-ai",
+  },
 ];
 
 export default function PatternsPage() {
