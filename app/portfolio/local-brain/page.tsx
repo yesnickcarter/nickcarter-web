@@ -41,6 +41,12 @@ const documents = [
     description:
       "What broke, what surprised, what the security review revealed about building with AI",
   },
+  {
+    title: "How It Was Made",
+    href: "/portfolio/local-brain/how-it-was-made",
+    description:
+      "Built entirely over Telegram while cutting hard maple in the front yard. From inspiration to open source release without touching a keyboard.",
+  },
 ];
 
 export default function LocalBrainPage() {

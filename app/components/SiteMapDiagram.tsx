@@ -100,7 +100,7 @@ export default function SiteMapDiagram() {
             </div>
             <div className="space-y-2">
               <Node label="7 Agentic docs" href="/portfolio/agentic-novel" desc="Skill, style guide, ban list, drafts..." />
-              <Node label="5 Local Brain docs" href="/portfolio/local-brain" desc="Architecture, security, cost tracking..." />
+              <Node label="6 Local Brain docs" href="/portfolio/local-brain" desc="Architecture, security, cost tracking..." />
               <Node label="5 Site docs" href="/portfolio/this-site" desc="Spec, plan, design decisions..." />
               <Node label="4 LoreHaven docs" href="/portfolio/lorehaven" desc="Architecture, MCP, client..." />
               <Node label="4 CLAUDE.md docs" href="/portfolio/claude-md-systems" desc="Architecture, commands, journal..." />

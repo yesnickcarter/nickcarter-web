@@ -18,6 +18,7 @@ export const localBrainNav: ArtifactNav = {
     { title: "MCP Tools", href: "/portfolio/local-brain/mcp-tools" },
     { title: "Cost Tracking", href: "/portfolio/local-brain/cost-tracking" },
     { title: "Lessons Learned", href: "/portfolio/local-brain/lessons-learned" },
+    { title: "How It Was Made", href: "/portfolio/local-brain/how-it-was-made" },
   ],
 };
 
