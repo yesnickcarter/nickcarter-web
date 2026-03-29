@@ -34,6 +34,12 @@ const patterns = [
       "Sign up. Open it. Use it on something real. The adoption curve isn't a learning curve — it's a habit curve.",
     href: "/patterns/just-use-ai",
   },
+  {
+    title: "Complete Code Is the New Epic",
+    description:
+      "While teams spend weeks studying how to build something, people with AI agents are delivering entire systems in hours. Working software is the fastest feedback loop that exists.",
+    href: "/patterns/complete-code-is-the-new-epic",
+  },
 ];
 
 export default function PatternsPage() {

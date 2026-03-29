@@ -89,6 +89,8 @@ export default function SiteMapDiagram() {
               <Node label="Visual Design Review" href="/patterns/visual-design-review" desc="Browser mockups for decisions" />
               <Node label="Whiteboard Verification" href="/patterns/whiteboard-verification" desc="AI draws before it builds" />
               <Node label="Intentional Obsolescence" href="/patterns/intentional-obsolescence" desc="Build to be replaced" />
+              <Node label="Just Use AI" href="/patterns/just-use-ai" desc="The habit curve" />
+              <Node label="Complete Code" href="/patterns/complete-code-is-the-new-epic" desc="Working software as feedback" />
             </div>
           </div>
 
