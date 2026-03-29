@@ -71,11 +71,11 @@ export default function SiteMapDiagram() {
             <div className="space-y-2">
               <Node label="LoreHaven" href="/portfolio/lorehaven" desc="MCP server · context vault" />
               <Node label="Local Brain" href="/portfolio/local-brain" desc="Self-hosted AI memory layer" />
-              <Node label="CLAUDE.md Systems" href="/portfolio#claude-md-systems" desc="Persistent AI memory" />
-              <Node label="Ship With Intent" href="/portfolio#ship-with-intent" desc="Content operation" />
+              <Node label="CLAUDE.md Systems" href="/portfolio/claude-md-systems" desc="Persistent AI memory" />
+              <Node label="Ship With Intent" href="/portfolio/ship-with-intent" desc="Content operation" />
               <Node label="Agentic Novel" href="/portfolio/agentic-novel" desc="35-chapter drafting system" />
               <Node label="This Site" href="/portfolio/this-site" desc="Built in one session" />
-              <Node label="Album" href="/portfolio#until-the-day-is-over" desc="AI-augmented music" />
+              <Node label="Album" href="/portfolio/until-the-day-is-over" desc="AI-augmented music" />
             </div>
           </div>
 
@@ -103,6 +103,9 @@ export default function SiteMapDiagram() {
               <Node label="5 Local Brain docs" href="/portfolio/local-brain" desc="Architecture, security, cost tracking..." />
               <Node label="5 Site docs" href="/portfolio/this-site" desc="Spec, plan, design decisions..." />
               <Node label="4 LoreHaven docs" href="/portfolio/lorehaven" desc="Architecture, MCP, client..." />
+              <Node label="4 CLAUDE.md docs" href="/portfolio/claude-md-systems" desc="Architecture, commands, journal..." />
+              <Node label="4 Ship With Intent docs" href="/portfolio/ship-with-intent" desc="Threads, voice, platform, workflow..." />
+              <Node label="4 Album docs" href="/portfolio/until-the-day-is-over" desc="Concept, band, tracks, production..." />
               <Node label="llms.txt" desc="AI-readable endpoints" />
             </div>
           </div>

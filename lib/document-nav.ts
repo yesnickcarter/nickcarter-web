@@ -46,6 +46,39 @@ export const lorehavenNav: ArtifactNav = {
   ],
 };
 
+export const claudeMdNav: ArtifactNav = {
+  artifactTitle: "CLAUDE.md Systems",
+  overviewHref: "/portfolio/claude-md-systems",
+  documents: [
+    { title: "Four-Layer Architecture", href: "/portfolio/claude-md-systems/architecture" },
+    { title: "Custom Commands", href: "/portfolio/claude-md-systems/commands" },
+    { title: "Lore Journal", href: "/portfolio/claude-md-systems/lore-journal" },
+    { title: "Design Principles", href: "/portfolio/claude-md-systems/design-principles" },
+  ],
+};
+
+export const shipWithIntentNav: ArtifactNav = {
+  artifactTitle: "Ship With Intent",
+  overviewHref: "/portfolio/ship-with-intent",
+  documents: [
+    { title: "Content Threads", href: "/portfolio/ship-with-intent/content-threads" },
+    { title: "Structure & Voice", href: "/portfolio/ship-with-intent/structure-and-voice" },
+    { title: "Platform Strategy", href: "/portfolio/ship-with-intent/platform-strategy" },
+    { title: "AI-Augmented Workflow", href: "/portfolio/ship-with-intent/workflow" },
+  ],
+};
+
+export const untilTheDayIsOverNav: ArtifactNav = {
+  artifactTitle: "Until The Day Is Over",
+  overviewHref: "/portfolio/until-the-day-is-over",
+  documents: [
+    { title: "The Concept", href: "/portfolio/until-the-day-is-over/concept" },
+    { title: "The Band", href: "/portfolio/until-the-day-is-over/band" },
+    { title: "Track Listing", href: "/portfolio/until-the-day-is-over/tracks" },
+    { title: "AI & Production", href: "/portfolio/until-the-day-is-over/production" },
+  ],
+};
+
 export const thisSiteNav: ArtifactNav = {
   artifactTitle: "nickcarter.ai",
   overviewHref: "/portfolio/this-site",

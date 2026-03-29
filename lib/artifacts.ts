@@ -43,6 +43,7 @@ export const artifacts: Artifact[] = [
     section: "build",
     detail:
       "Nick designed and maintains a multi-layered AI context system spanning two major repositories — a personal career management workspace and a company content operation. The system is built around a core insight: AI tools don't have memory between sessions, so the architecture has to supply continuity that the tool itself can't.\n\nThe system has four components that work together. Project-specific persistent memory carries task lists, project facts, and in-progress status across sessions. A custom commands library — 15+ commands — handles journal integration, task management, weekly planning, and content drafting. Structured skills embed system prompts and protocols directly, so the right context loads for the right task without manual assembly. And the memory organization separates persistent context (stable facts) from per-session context (active drafts, temporary exploration), so sessions start clean without losing state that actually matters.\n\nThe design principle driving all of it is omission over inclusion. Most people building context systems make them bigger over time — more files, more notes, more detail. Nick's system works the other way: what you leave out matters more than what you put in. Irrelevant context doesn't just waste space, it actively degrades AI performance by distributing attention across material that isn't relevant to the task at hand. Every addition to the system has to earn its place.",
+    deepDivePath: "/portfolio/claude-md-systems",
   },
   {
     id: "ship-with-intent",
@@ -57,6 +58,7 @@ export const artifacts: Artifact[] = [
       { label: "Substack", url: "https://shipwithintent.substack.com" },
       { label: "YouTube", url: "https://www.youtube.com/@ShipWithIntent" },
     ],
+    deepDivePath: "/portfolio/ship-with-intent",
   },
   {
     id: "agentic-novel",
@@ -99,5 +101,6 @@ export const artifacts: Artifact[] = [
     section: "create",
     detail:
       "Until The Day Is Over is a 14-track concept album with a specific conceit: a daughter named Joan sings her mother Margot's life — not as covers, but as songs Joan absorbed growing up and made her own. Margot was a Bakersfield punk rocker who chased music in LA, never signed, and eventually moved to Ohio. She never stopped singing. She just stopped performing. The album takes her punk-rock songwriting and modernizes it through her daughter's generation's sound.\n\nThe arc moves chronologically through Margot's life — leaving home, love and loss, a mother's death, the grace of parenthood, and a final reckoning with borrowed anger and chosen freedom. The emotional through-line is inheritance: what gets passed down, what gets transformed, and what a daughter does with a story that was never hers to tell and always hers to carry.\n\nAI assisted with production design, arrangement exploration, and lyric refinement. The hardest creative problem wasn't the technology — it was using AI on emotionally specific material without flattening it into generic polish. The songs predate any AI tool; they came from real people and real stories. The system had to be useful without becoming the voice. That required a different kind of specification: not just what to do, but what not to do, and why.",
+    deepDivePath: "/portfolio/until-the-day-is-over",
   },
 ];
