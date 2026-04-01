@@ -80,6 +80,16 @@ export const untilTheDayIsOverNav: ArtifactNav = {
   ],
 };
 
+export const toolAuditNav: ArtifactNav = {
+  artifactTitle: "Tool Audit",
+  overviewHref: "/portfolio/tool-audit",
+  documents: [
+    { title: "How It Works", href: "/portfolio/tool-audit/how-it-works" },
+    { title: "The Research", href: "/portfolio/tool-audit/the-research" },
+    { title: "MCP Spec Proposal", href: "/portfolio/tool-audit/mcp-spec-proposal" },
+  ],
+};
+
 export const thisSiteNav: ArtifactNav = {
   artifactTitle: "nickcarter.ai",
   overviewHref: "/portfolio/this-site",

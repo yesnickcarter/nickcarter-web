@@ -93,6 +93,18 @@ export const artifacts: Artifact[] = [
       "This site was designed, spec'd, planned, and built in a single AI-assisted session — approximately three hours from first brainstorm to running deployment. The process used the same skills the site describes: a design spec was written and automatically reviewed (catching four issues before any code was written), an eight-task implementation plan was created, and each task was dispatched to a fresh AI subagent with curated context.\n\nThe editorial design direction was chosen through interactive visual comparison — three directions shown side-by-side in a browser, refined through two more rounds (hero style, card style), then executed. The signature left-border accent bar emerged from the Bold Editorial hero choice and carries through every card and section on the site. Six animation packages (scroll reveal, hero entrance, accent bar draw, hover micro-interactions, page transitions, subtle parallax) were added to give the site the feel of a premium build.\n\nThe site also serves markdown versions of its content at /llms.txt and /llms-full.txt — structured for AI agent consumption. When a recruiter pastes the URL into Claude, the response is substantive instead of garbled HTML. Building for the world where agents consume the web, not just humans.",
   },
   {
+    id: "tool-audit",
+    title: "Tool Audit",
+    oneLiner:
+      "Two Claude Code skills that detect and fix tool conflicts across MCP servers. Open source.",
+    skills: ["Trust Boundary Design", "Decomposition", "Context Architecture"],
+    section: "build",
+    detail:
+      "When you have multiple MCP servers installed, their tools overlap. \"Remember this\" might hit Local Brain or IntentPad. \"Search my notes\" might go to the wrong system entirely. The AI picks one — and you may never know it picked wrong. The MCP spec has no namespacing requirement, no collision detection, and no routing rules. Claude Code's mcp__server__tool prefix prevents name collisions but not semantic collisions — two tools with different names that respond to the same intent.\n\nTool Audit is two Claude Code skills that solve this. The first, /audit-tools, scans every tool in the session across all MCP servers and skills. It detects naming collisions, vocabulary overlap, functional duplication, and shadowed tools, then generates a severity-scored report with actionable fixes — routing rules, description improvements, tool renames, or disabling redundant tools. The second, /wrong-tool, handles the moment it goes wrong. When the AI uses the wrong tool, the skill identifies the collision, explains why it happened, drafts a routing rule, and offers to apply it to CLAUDE.md. One bad routing event becomes a permanent fix.\n\nThe key design decision was privacy. A skill runs entirely inside the user's session. The tool manifest — the full list of every MCP server and tool installed — never leaves the local environment. An MCP server approach would require sending that inventory to a third party for analysis. Skills keep the audit private. They also bypass the MCP protocol's fundamental limitation: servers can't see sibling servers' tools, but skills can, because the manifest is already in the model's context.",
+    links: [{ label: "GitHub", url: "https://github.com/Chapworks/tool-audit" }],
+    deepDivePath: "/portfolio/tool-audit",
+  },
+  {
     id: "until-the-day-is-over",
     title: "Until The Day Is Over",
     oneLiner:

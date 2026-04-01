@@ -75,6 +75,7 @@ export default function SiteMapDiagram() {
               <Node label="Ship With Intent" href="/portfolio/ship-with-intent" desc="Content operation" />
               <Node label="Agentic Novel" href="/portfolio/agentic-novel" desc="35-chapter drafting system" />
               <Node label="This Site" href="/portfolio/this-site" desc="Built in one session" />
+              <Node label="Tool Audit" href="/portfolio/tool-audit" desc="MCP tool collision detection" />
               <Node label="Album" href="/portfolio/until-the-day-is-over" desc="AI-augmented music" />
             </div>
           </div>
@@ -107,6 +108,7 @@ export default function SiteMapDiagram() {
               <Node label="4 LoreHaven docs" href="/portfolio/lorehaven" desc="Architecture, MCP, client..." />
               <Node label="4 CLAUDE.md docs" href="/portfolio/claude-md-systems" desc="Architecture, commands, journal..." />
               <Node label="4 Ship With Intent docs" href="/portfolio/ship-with-intent" desc="Threads, voice, platform, workflow..." />
+              <Node label="3 Tool Audit docs" href="/portfolio/tool-audit" desc="How it works, research, spec proposal..." />
               <Node label="4 Album docs" href="/portfolio/until-the-day-is-over" desc="Concept, band, tracks, production..." />
               <Node label="llms.txt" desc="AI-readable endpoints" />
             </div>

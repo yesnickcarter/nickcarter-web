@@ -35,6 +35,7 @@ Details: /llms-full.txt#local-brain
 ### CLAUDE.md & Memory System Design
 A persistent context architecture for AI-assisted workflows across multiple projects.
 Skills: Context Architecture, Specification Precision
+Deep dive: https://nickcarter.ai/portfolio/claude-md-systems
 Details: /llms-full.txt#claude-md-systems
 
 ### Ship With Intent
@@ -42,7 +43,15 @@ A content operation run through AI-augmented workflows — Substack, YouTube, Li
 Skills: Specification Precision, Evaluation, Decomposition
 Substack: https://shipwithintent.substack.com
 YouTube: https://www.youtube.com/@ShipWithIntent
+Deep dive: https://nickcarter.ai/portfolio/ship-with-intent
 Details: /llms-full.txt#ship-with-intent
+
+### Tool Audit
+Two Claude Code skills that detect and fix tool conflicts across MCP servers. Open source.
+Skills: Trust Boundary Design, Decomposition, Context Architecture
+GitHub: https://github.com/Chapworks/tool-audit
+Deep dive: https://nickcarter.ai/portfolio/tool-audit
+Details: /llms-full.txt#tool-audit
 
 ## How I Create with AI
 
@@ -61,6 +70,7 @@ Details: /llms-full.txt#this-site
 ### Until The Day Is Over
 A concept album produced and released using AI-augmented music production.
 Skills: Evaluation, Specification Precision
+Deep dive: https://nickcarter.ai/portfolio/until-the-day-is-over
 Details: /llms-full.txt#until-the-day-is-over
 
 ## For More Detail
