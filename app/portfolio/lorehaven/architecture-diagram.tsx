@@ -110,7 +110,7 @@ export default function ArchitectureDiagram() {
       <FadeIn delay={0.25}>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           <ServiceBox title="Lore Builder Wizard" desc="Plain-English questions → structured Lore<br/>Starter packs for 5 user profiles" />
-          <ServiceBox title="Haven Vault" desc="Lore editor, Saved Prompts, Journal<br/>Version history & full export" />
+          <ServiceBox title="Haven Vault" desc="Lore editor, Saved Prompts<br/>Version history & full export" />
           <ServiceBox title="Account & Billing" desc="Sign up, subscribe, manage plan<br/>Stripe integration" />
         </div>
       </FadeIn>
@@ -132,10 +132,9 @@ export default function ArchitectureDiagram() {
       {/* Storage */}
       <FadeIn delay={0.45}>
         <LayerLabel>Cloud Storage (S3-compatible)</LayerLabel>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <VaultBox title="Lore" lines={["Core document", "300–600 words", "Plain text (Markdown)"]} />
           <VaultBox title="Saved Prompts" lines={["AI instructions", "Organized & tagged", "Never lost"]} />
-          <VaultBox title="Journal" lines={["Private reflections", "Fully versioned", "Exportable"]} />
         </div>
       </FadeIn>
 

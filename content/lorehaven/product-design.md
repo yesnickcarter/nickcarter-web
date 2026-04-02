@@ -7,7 +7,7 @@ Lore Haven exists because of a gap no AI company is incentivized to fill. Claude
 The Lore Builder is the product's primary differentiator — a guided wizard that solves the "what do I tell AI?" problem for non-technical users.
 
 The flow is deliberate:
-1. User checks boxes for what matters (work, journaling, goals, family stories, preferences)
+1. User checks boxes for what matters (work, goals, family stories, preferences)
 2. Answers plain-English follow-up questions — no jargon, no configuration
 3. AI structures the answers into a clean, portable document
 4. Result: a Lore document ready to use in 10 minutes

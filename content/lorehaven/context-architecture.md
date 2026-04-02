@@ -14,7 +14,6 @@ The Haven is a web-based personal vault that stores three things:
 
 - **Your Lore** — the core AI memory document, built by the Lore Builder wizard
 - **Saved Prompts** — AI instructions that work for you, organized and never lost
-- **Journal** — private thoughts, decisions, reflections, fully versioned
 
 Storage is cloud-based (S3-compatible object storage), with every save creating a recoverable snapshot. Users can restore any version of any file and download their entire vault as plain text at any time. No lock-in, no proprietary formats.
 
@@ -25,7 +24,7 @@ The critical design decision: small, curated collections outperform archives. Ev
 The product delivers value at three levels, and the first requires nothing but a browser:
 
 - **Free:** Web wizard builds the Lore. User copies it into any AI tool manually. No installation, no configuration. This is where most users start and where the product proves itself.
-- **Personal ($60/year):** Unlimited Lore Builder categories, all starter packs, unlimited Saved Prompts, Journal with full version history, complete export.
+- **Personal ($60/year):** Unlimited Lore Builder categories, all starter packs, unlimited Saved Prompts with full version history, complete export.
 - **Phase 2:** One-click AI connectors — browser extension or direct API integration so the Lore loads automatically.
 
 The restraint is deliberate: don't force infrastructure before proving value. A non-technical user evaluates the product entirely through the web, with nothing to install and nothing to configure. Users who love the Lore document will pay to keep it. Users who don't love the Lore would never have paid anyway.

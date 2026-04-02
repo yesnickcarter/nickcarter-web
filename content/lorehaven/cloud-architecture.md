@@ -20,7 +20,7 @@ The production architecture has three layers:
 **Web App (lorehaven.ai)**
 - Next.js static export on Cloudflare Pages
 - Lore Builder wizard (guided questionnaire to structured document)
-- Haven vault UI (Lore editor, Saved Prompts, Journal)
+- Haven vault UI (Lore editor, Saved Prompts)
 - Account management and Stripe billing
 
 **API (api.lorehaven.ai)**
