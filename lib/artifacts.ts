@@ -11,6 +11,17 @@ export interface Artifact {
 
 export const artifacts: Artifact[] = [
   {
+    id: "intentpad",
+    title: "IntentPad",
+    oneLiner:
+      "An AI-powered productivity system — capture thoughts in one field, let AI classify them, plan your week with two goals per day, and learn how you work through AI-generated weekly reviews.",
+    skills: ["Full-Stack Product Development", "AI Integration", "Product Design", "Custom Auth", "Design Systems"],
+    section: "build",
+    detail:
+      "Most productivity apps give you a list. Lists don't work — they grow faster than you can check things off, and the important stuff drowns in the noise. IntentPad takes a different approach: capture anything in a single text field, let AI classify it (note, task, or event), then plan your week with just two commitments per day — a Primary Goal and a Secondary Goal.\n\nThe constraint is the feature. When you can only pick two things, you have to decide what actually matters. The weekly planner is a negotiation with your future self — you set three outcomes for the week (Big 3), fill your daily slots, and at the end of the week, AI analyzes what happened. Not to judge, but to help you see patterns: 'You completed everything Monday through Wednesday. Nothing after Wednesday got done.' Week after week, you learn your rhythm.\n\nBuilt end-to-end in a single session: custom JWT auth with refresh token rotation (no third-party auth providers), AI classification with confidence-based graduation (high confidence auto-promotes notes to tasks, medium suggests, low stays as note), the Pulp & Ink comic book design system with halftone textures and inky shadows, a three-column desktop planner cockpit, responsive mobile views, Stripe billing, GDPR-compliant account deletion with an external ledger, and Resend email integration.\n\nThe tech stack: Hono API on Node.js, Drizzle ORM with PostgreSQL, Next.js frontend, OpenAI GPT-4o-mini for classification, Tailwind CSS with a custom comic book design system. Deployed on Cloudflare Pages and Railway.",
+    links: [{ label: "IntentPad", url: "https://intentpad.com" }],
+  },
+  {
     id: "lorehaven",
     title: "Lore Haven",
     oneLiner:
