@@ -42,3 +42,4 @@ next-env.d.ts
 .superpowers/
 .worktrees/
 public/chat-context.txt
+public/deep-dive/
