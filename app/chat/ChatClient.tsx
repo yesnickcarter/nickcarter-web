@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import ChatSidebar from "./ChatSidebar";
@@ -28,6 +29,7 @@ export default function ChatClient() {
   const [isStreaming, setIsStreaming] = useState(false);
   const [consent, setConsent] = useState(false);
   const [showConsent, setShowConsent] = useState(false);
+  const [showConsentToast, setShowConsentToast] = useState(false);
   const [selectedDocs, setSelectedDocs] = useState<Set<string>>(new Set());
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const userMessageCount = messages.filter((m) => m.role === "user").length;
@@ -161,7 +163,10 @@ export default function ChatClient() {
           }
         }
 
-        if (!showConsent) setShowConsent(true);
+        if (!showConsent) {
+          setShowConsent(true);
+          setShowConsentToast(true);
+        }
 
         if (userMessageCount + 1 >= MAX_MESSAGES) {
           setMessages((prev) => [...prev, SESSION_END_MESSAGE]);
@@ -247,6 +252,54 @@ export default function ChatClient() {
           </div>
         </div>
       </div>
+
+      {/* Consent toast — appears after first AI response */}
+      <AnimatePresence>
+        {showConsentToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed bottom-6 right-6 z-50 bg-white border border-[#e8e4df] shadow-lg px-5 py-4 max-w-sm"
+          >
+            <div className="flex items-start gap-3">
+              <div className="flex-1">
+                <p className="text-sm font-medium text-[#1a1a1a]">
+                  Share this conversation?
+                </p>
+                <p className="text-xs text-[#6b6560] leading-relaxed mt-1">
+                  Help Nick improve this tool — opt in to share for quality
+                  improvements. Nothing is logged without your consent.
+                </p>
+                <div className="flex items-center gap-3 mt-3">
+                  <button
+                    onClick={() => {
+                      setConsent(true);
+                      setShowConsentToast(false);
+                    }}
+                    className="text-xs font-medium text-white bg-[#b45309] hover:bg-[#92400e] px-4 py-1.5 transition-colors"
+                  >
+                    Opt in
+                  </button>
+                  <button
+                    onClick={() => setShowConsentToast(false)}
+                    className="text-xs text-[#a69e95] hover:text-[#6b6560] transition-colors"
+                  >
+                    No thanks
+                  </button>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowConsentToast(false)}
+                className="text-[#a69e95] hover:text-[#1a1a1a] transition-colors text-lg leading-none shrink-0"
+              >
+                &times;
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
