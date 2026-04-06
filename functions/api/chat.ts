@@ -156,6 +156,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     messages: messages.map((m) => ({ role: m.role, content: m.content })),
   });
 
+  // Use a deferred promise so context.waitUntil() can keep the worker alive for logging
+  let resolveLog: () => void;
+  const logDone = new Promise<void>((r) => { resolveLog = r; });
+
   const encoder = new TextEncoder();
   const readable = new ReadableStream({
     async start(controller) {
@@ -198,9 +202,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         );
       } finally {
         controller.close();
+        resolveLog!();
       }
     },
   });
+
+  // Keep worker alive until stream + logging completes
+  context.waitUntil(logDone);
 
   return new Response(readable, {
     headers: {
