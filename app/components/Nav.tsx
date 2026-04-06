@@ -22,6 +22,12 @@ export default function Nav() {
         >
           Portfolio
         </Link>
+        <Link
+          href="/chat"
+          className="nav-link text-sm tracking-wide uppercase text-[#6b6560] hover:text-[#1a1a1a] transition-colors"
+        >
+          Ask AI
+        </Link>
       </div>
     </nav>
   );
