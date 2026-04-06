@@ -88,5 +88,6 @@ export const thisSiteNav: ArtifactNav = {
     { title: "Design Decisions", href: "/portfolio/this-site/design-decisions" },
     { title: "The Process", href: "/portfolio/this-site/process" },
     { title: "Lessons Learned", href: "/portfolio/this-site/lessons-learned" },
+    { title: "Ask AI — How It Works", href: "/portfolio/this-site/ask-ai-chat" },
   ],
 };

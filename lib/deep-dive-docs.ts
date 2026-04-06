@@ -62,6 +62,7 @@ export const deepDiveGroups: DeepDiveGroup[] = [
       { id: "this-site-process-narrative", title: "Process Narrative", filePath: "this-site/process-narrative.md" },
       { id: "this-site-design-decisions", title: "Design Decisions", filePath: "this-site/design-decisions.md" },
       { id: "this-site-lessons-learned", title: "Lessons Learned", filePath: "this-site/lessons-learned.md" },
+      { id: "this-site-ask-ai-chat", title: "Ask AI — How It Works", filePath: "this-site/ask-ai-chat.md" },
     ],
   },
   {

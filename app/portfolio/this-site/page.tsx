@@ -41,6 +41,12 @@ const documents = [
     description:
       "What went wrong, what was corrected, what would be done differently",
   },
+  {
+    title: "Ask AI — How It Works",
+    href: "/portfolio/this-site/ask-ai-chat",
+    description:
+      "What the AI knows, what rules it follows, confidence tiers, anti-hallucination constraints, and why transparency matters",
+  },
 ];
 
 export default function ThisSitePage() {
