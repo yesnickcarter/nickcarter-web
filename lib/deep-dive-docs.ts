@@ -19,6 +19,15 @@ export const deepDiveGroups: DeepDiveGroup[] = [
     ],
   },
   {
+    artifact: "IntentPad",
+    docs: [
+      { id: "intentpad-overview", title: "Overview", filePath: "intentpad/overview.md" },
+      { id: "intentpad-ai-integration", title: "AI Integration", filePath: "intentpad/ai-integration.md" },
+      { id: "intentpad-architecture", title: "Architecture", filePath: "intentpad/architecture.md" },
+      { id: "intentpad-product-design", title: "Product Design", filePath: "intentpad/product-design.md" },
+    ],
+  },
+  {
     artifact: "Lore Haven",
     docs: [
       { id: "lorehaven-context-architecture", title: "Context Architecture", filePath: "lorehaven/context-architecture.md" },
