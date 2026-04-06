@@ -190,7 +190,9 @@ The full contents of `chat-context.txt` (generated at build time), containing:
 - `llms-full.txt` — professional summary, career history, AI skills assessment, all artifact details, education, domain expertise. Structured with clear section markers for mental indexing.
 - Career stories from `chat-context-career-stories.md` — the follow-up-surviving detail behind each resume bullet. BD IEC 62304 transition, customer cancellation, Dexcom reliability and scale, leadership philosophy, honest gaps, career pivot, what Nick is looking for, working style.
 
-**Estimated total context:** ~5,000-7,000 tokens depending on career stories length.
+**Dynamic deep-dive documents:** When the user has selected deep-dive documents via the sidebar, their content is appended after the base context with clear section markers. The system prompt includes an instruction: "The user has loaded additional deep-dive documents. Draw from these when relevant. If a question would be better answered with a specific document that isn't currently loaded, mention it: 'Nick has a detailed write-up on [topic] available in the deep-dive documents — you can load it from the sidebar for more depth.'"
+
+**Estimated base context:** ~5,000-7,000 tokens. With 3-5 deep-dive docs loaded, ~8,000-14,000 tokens total. Well within Sonnet's context window.
 
 ### Layer 4: Depth Signals
 
@@ -253,6 +255,35 @@ inference or general knowledge to answer the follow-up, don't suggest it.
 - "How I arrived at this": smooth expand/collapse with height animation
 - Sidebar elements: staggered entrance on page load
 
+### Deep Dive Document Browser
+
+The sidebar includes a "Deep Dive" section — a list of portfolio documents the hiring manager can optionally load into the conversation context. Checked documents are included in the next API request; unchecked documents are excluded. This turns the chat from a fixed-context Q&A into a choose-your-own-depth tool.
+
+**Behavior:**
+- Documents are grouped by artifact, with checkboxes next to each document name
+- None are checked by default — base context (llms-full.txt + career stories) is always included
+- Checking a document adds its content to the system prompt for all subsequent messages in the session
+- Each document has a preview icon — clicking it opens the document in a modal so the hiring manager can read it directly
+- Documents can also be downloaded as markdown from the modal
+- The API request includes an array of selected document IDs; the function loads and appends their content
+
+**Available documents by artifact:**
+
+| Artifact | Documents |
+|----------|-----------|
+| IntentPad | Overview, Architecture, AI Integration, Product Design, Lessons Learned |
+| Lore Haven | Context Architecture, Product Design, Cloud Architecture, Lessons Learned |
+| Local Brain | Architecture, Security Review, MCP Tools, Cost Tracking, How It Was Made, Lessons Learned |
+| Ship With Intent | Platform Strategy, Workflow, Structure & Voice, Content Threads |
+| Tool Audit | How It Works, The Research, MCP Spec Proposal |
+| This Site | Design Spec, Process Narrative, Design Decisions, Lessons Learned |
+| Agentic Novel | Process Narrative, Style Guide, Skill System, Lessons Learned |
+| Until The Day Is Over | Concept, Production, Band, Tracks |
+
+**Context budget:** Each document is ~500-2,000 tokens. With 3-5 documents checked, total context stays well within Sonnet's window. The system prompt should instruct the AI to draw from the deep-dive documents when they're loaded and to signal when a question would be better answered with a specific document enabled.
+
+**Implementation:** Documents are served as static markdown files from `/content/{artifact}/`. The function reads selected files at request time and appends them to the system prompt after the base context. A manifest file (`lib/deep-dive-docs.ts`) maps document IDs to file paths, display names, and artifact groupings.
+
 ### Transcript Download
 
 Clicking "Download transcript" generates a markdown file:
@@ -302,9 +333,12 @@ nickcarter-web/
 │       ├── ChatMessage.tsx          # Single message with reasoning toggle
 │       ├── ChatInput.tsx            # Input field + send button
 │       ├── ReasoningBlock.tsx       # Expandable "How I arrived at this"
-│       └── ConsentBanner.tsx        # Opt-in logging toggle
+│       ├── ConsentBanner.tsx        # Opt-in logging toggle
+│       ├── DeepDiveBrowser.tsx     # Document checkbox list with preview
+│       └── DocumentModal.tsx       # Modal for viewing/downloading a document
 ├── lib/
-│   └── chat-context.ts             # System prompt assembly (all 4 layers)
+│   ├── chat-context.ts             # System prompt assembly (all 4 layers)
+│   └── deep-dive-docs.ts           # Manifest: doc IDs → file paths, names, groups
 ├── scripts/
 │   ├── generate-llms-txt.ts        # (existing)
 │   ├── generate-chat-context.ts    # Combine llms-full.txt + career stories
@@ -328,11 +362,14 @@ nickcarter-web/
 7. **Build script** — generate combined chat context from llms-full.txt + career stories
 8. **CLI script** — pull logged conversations from KV to local markdown
 9. **Hero update** — "Ask AI · soon" becomes active link to `/chat`
+10. **Deep dive document browser** — sidebar document list with checkboxes, preview modal, download, dynamic context loading
+11. **Document manifest** — mapping of document IDs to file paths, display names, and artifact groupings
 
 ## What's NOT in Scope
 
 - `/fit` page (future feature, separate spec)
 - Career stories content (Nick writes separately)
+- IntentPad deep-dive content and portfolio pages (Nick writes separately; chat feature works with existing docs, IntentPad added when ready)
 - Analytics dashboard (CLI pull is sufficient)
 - Mobile optimization beyond "doesn't break"
 
@@ -343,4 +380,5 @@ nickcarter-web/
 - [ ] Nick fills in `content/chat-context-career-stories.md` — cannot go live without this
 - [ ] Set `ANTHROPIC_API_KEY` as Cloudflare Pages environment variable
 - [ ] Map conversation starter chips to strongest context sections once career stories are written
+- [ ] Write IntentPad deep-dive content (`content/intentpad/`) and add portfolio pages
 - [ ] Test with someone unfamiliar with Nick's background
