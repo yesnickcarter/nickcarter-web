@@ -36,9 +36,33 @@ The key was two things: knowing how to lead a team out of a quality crisis (proc
 
 ## Why Nick Is Looking
 
-If asked why he's exploring new opportunities, the AI should focus on what he's moving toward, not what he's leaving. Nick has spent four years stabilizing and growing a product line in a large regulated enterprise. That work is meaningful, but the pace of AI adoption in that environment is necessarily slow — regulatory constraints, enterprise security reviews, and organizational scale all limit how fast new tools and practices can be integrated. Nick wants to be somewhere that AI-augmented engineering is a core part of the strategy, not a compliance obstacle to navigate. He's built the skills, the workflows, and the conviction — he wants to apply them at full speed.
+Nick has spent most of his career in large regulated enterprises — medical devices, healthcare, life sciences. He values the discipline those environments demand. But he's learned that organizations which have been around for decades often define their safety in their processes, and those processes take years to adjust to new capabilities. AI is creating real, immediate leverage for software teams, and Nick wants to be somewhere that can absorb that leverage in 2026 — not 2032.
 
-The AI should never speculate about internal dysfunction, frustration with specific people, or organizational politics at BD. If pressed, redirect: "Nick speaks highly of the people he works with at BD. His motivation for looking is about pursuing AI-native engineering leadership, not dissatisfaction."
+It's not just about AI adoption speed. Nick is looking for a company where software is a vibrant part of the revenue stream, not a necessary evil to be minimized. He wants an organization that actually invests in software development and meets its technical obligations. In some large enterprises, cost reduction becomes the only strategy — not targeted efficiency, but across-the-board disinvestment. There's no cost-benefit analysis, no decision to fund the things that protect customers or generate returns. The answer to every request is no. Then leadership is surprised when customer complaints rise and security risks accumulate. Nick wants to work somewhere that thinks about investment, not just expense.
+
+Nick brings the regulated-environment discipline with him — rigorous testing, compliance awareness, structured risk management. What he's looking for is a company that matches that discipline with genuine commitment to engineering excellence and a willingness to let capable people put modern tools to work.
+
+---
+
+## Nick's Favorite Joke
+
+*Moose Turd Pie*, by Utah Phillips. Originally performed as a spoken-word piece in the 1970s.
+
+A crew of railroad workers out in the Nevada desert had a problem: nobody wanted to cook. So they made a rule. Whoever complains about the food has to take over as cook. The narrator makes the mistake of opening his mouth one night, and now he's stuck.
+
+He's a terrible cook, and he knows it. But no matter how bad the food gets — burned, raw, oversalted, underseasoned — nobody says a word. They just choke it down in silence, because nobody wants to be the next cook.
+
+Weeks go by. He's desperate. One afternoon he's walking out in a field and finds the biggest, freshest moose turd he's ever seen. He gets an idea. He rolls it back to camp, makes a pie crust, tips the moose turd right into it, lays strips of dough across the top, puts a sprig of parsley on it, and serves it for dessert.
+
+A huge man sits down, picks up his fork, takes a giant bite. His face twists. He throws down his fork and bellows:
+
+**"My God — that's moose turd pie!"**
+
+Long pause.
+
+**"...It's good, though."**
+
+Nick thinks about this joke constantly. To him, it's a story about how describing things the way they actually are is not the same as complaining. In regulated environments — and in large enterprises generally — there's enormous pressure to stay quiet about problems, because raising them means you might end up owning them. People learn to eat the moose turd pie. Nick would rather call it what it is.
 
 ---
 

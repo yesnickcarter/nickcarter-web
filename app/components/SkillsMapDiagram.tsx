@@ -16,16 +16,16 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 }
 
 const skills = [
-  { name: "Specification Precision", artifacts: ["LoreHaven", "Local Brain", "CLAUDE.md", "Ship With Intent", "Agentic", "This Site", "Album"] },
-  { name: "Evaluation & Quality Judgment", artifacts: ["Ship With Intent", "Agentic", "This Site", "Album"] },
-  { name: "Decomposition for Delegation", artifacts: ["LoreHaven", "Local Brain", "Ship With Intent", "Agentic", "This Site"] },
-  { name: "Failure Pattern Recognition", artifacts: ["LoreHaven", "Local Brain", "Agentic"] },
-  { name: "Trust Boundary Design", artifacts: ["LoreHaven", "Local Brain"] },
-  { name: "Context Architecture", artifacts: ["LoreHaven", "CLAUDE.md", "Agentic"] },
-  { name: "Cost & Token Economics", artifacts: ["Local Brain"] },
+  { name: "Specification Precision", artifacts: ["IntentPad", "LoreHaven", "Local Brain", "CLAUDE.md", "Ship With Intent", "Agentic", "This Site", "Album"] },
+  { name: "Evaluation & Quality Judgment", artifacts: ["IntentPad", "Ship With Intent", "Agentic", "This Site", "Album"] },
+  { name: "Decomposition for Delegation", artifacts: ["IntentPad", "LoreHaven", "Local Brain", "Ship With Intent", "Agentic", "This Site"] },
+  { name: "Failure Pattern Recognition", artifacts: ["IntentPad", "LoreHaven", "Local Brain", "Agentic"] },
+  { name: "Trust Boundary Design", artifacts: ["IntentPad", "LoreHaven", "Local Brain"] },
+  { name: "Context Architecture", artifacts: ["IntentPad", "LoreHaven", "CLAUDE.md", "Agentic"] },
+  { name: "Cost & Token Economics", artifacts: ["IntentPad", "Local Brain"] },
 ];
 
-const allArtifacts = ["LoreHaven", "Local Brain", "CLAUDE.md", "Ship With Intent", "Agentic", "This Site", "Album"];
+const allArtifacts = ["IntentPad", "LoreHaven", "Local Brain", "CLAUDE.md", "Ship With Intent", "Agentic", "This Site", "Album"];
 
 export default function SkillsMapDiagram() {
   return (
